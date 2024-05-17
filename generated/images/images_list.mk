@@ -1,0 +1,1 @@
+GEN_CSRCS += _1313754_alpha_418x242.c
