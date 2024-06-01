@@ -37,6 +37,7 @@ int main(void)
     disp_drv.draw_buf   = &disp_buf;
     disp_drv.flush_cb   = drm_flush;
     disp_drv.wait_cb    = drm_wait_vsync;
+    disp_drv.full_refresh = 1;    //解决drm与fb资源冲突,导致闪屏的问题
     /* disp_drv.sw_rotate = 1; */
     /* disp_drv.rotated = LV_DISP_ROT_90; */
     drm_get_sizes(&disp_drv.hor_res, &disp_drv.ver_res, &dpi);
